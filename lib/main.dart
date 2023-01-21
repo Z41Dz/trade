@@ -47,13 +47,6 @@ class _MyAppState extends State<MyApp> {
             child: Routes(index: index),
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.red,
-          onPressed: () {
-            print("Hola Mundo");
-          },
-          child: const Text("SOS"),
-        ),
       ),
     );
   }

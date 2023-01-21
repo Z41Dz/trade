@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:inicio_2_1/BNavigation/Inventario.dart';
 import 'package:inicio_2_1/BNavigation/Mensajes.dart';
-import 'Inicio_page.dart';
+import 'package:inicio_2_1/Inicio-list/Inicio_list_screen.dart';
 
 class Routes extends StatelessWidget {
   final int index;
@@ -10,7 +10,7 @@ class Routes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> myList = [
-      const Inicio(),
+      const InicioList(),
       const Inventario(),
       const Mensajes()
     ];

@@ -45,170 +45,233 @@ class InicioList extends StatelessWidget {
                         height: 26,
                       ),
 //container dinero
-                      Container(
-                        height: 52,
-                        width: 307,
-                        decoration: const BoxDecoration(
-                            color: Color(0xFFCEE7D8),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(32.0))),
-                        child: Row(
-                          children: <Widget>[
-                            Expanded(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: const <Widget>[
-                                      Text('\$111111',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w700,
-                                            fontSize: 18,
-                                          ))
-                                    ],
-                                  ),
-                                  const Text('EFECTIVO',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                      ))
-                                ],
-                              ),
-                            ),
-                            Container(
-                              width: 1,
-                              height: double.infinity,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          ClipPath(
+                            clipper: TriangleClipper(),
+                            child: Container(
+                              height: 52,
+                              width: 153.5,
                               decoration: const BoxDecoration(
-                                  gradient: LinearGradient(
-                                      begin: Alignment.centerLeft,
-                                      end: Alignment.centerRight,
-                                      colors: [
-                                    Colors.black,
-                                    Colors.transparent
-                                  ])),
-                            ),
-                            Expanded(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
+                                  color: Color(0xFFCEE7D8),
+                                  borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(32.0),
+                                      bottomLeft: Radius.circular(32.0))),
+                              child: Row(
                                 children: <Widget>[
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: const <Widget>[
-                                      Text('\$222222',
+                                  Expanded(
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: const <Widget>[
+                                            Text(
+                                              '\$111111',
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w700,
+                                                fontSize: 18,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        const Text(
+                                          'EFECTIVO',
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
-                                            fontWeight: FontWeight.w700,
-                                            fontSize: 18,
-                                          ))
-                                    ],
+                                            fontSize: 12,
+                                          ),
+                                        )
+                                      ],
+                                    ),
                                   ),
-                                  const Text('CREDITO',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                      ))
                                 ],
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                          ClipPath(
+                            clipper: ReceiverClipper(),
+                            child: Container(
+                              height: 52,
+                              width: 153.5,
+                              decoration: const BoxDecoration(
+                                  color: Color(0xFFCEE7D8),
+                                  borderRadius: BorderRadius.only(
+                                      topRight: Radius.circular(32.0),
+                                      bottomRight: Radius.circular(32.0))),
+                              child: Row(
+                                children: <Widget>[
+                                  Expanded(
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: const <Widget>[
+                                            Text(
+                                              '\$222222',
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w700,
+                                                fontSize: 18,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        const Text(
+                                          'CREDITO',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
+
                       const SizedBox(
                         height: 17,
                       ),
 //container clientes
-                      Container(
-                        height: 52,
-                        width: 343,
-                        decoration: const BoxDecoration(
-                            color: Color(0xFFCEE7D8),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(32.0))),
-                        child: Row(
-                          children: <Widget>[
-                            Expanded(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: const <Widget>[
-                                  Text('Texto 1',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w700,
-                                        fontSize: 18,
-                                      )),
-                                  Text('Texto adicional 1',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                      ))
-                                ],
-                              ),
-                            ),
-                            Container(
-                              width: 1,
-                              height: double.infinity,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          //
+                          ClipPath(
+                            clipper: ThirdClipper(),
+                            child: Container(
+                              height: 52,
+                              width: 114.3,
                               decoration: const BoxDecoration(
-                                  gradient: LinearGradient(
-                                      begin: Alignment.centerLeft,
-                                      end: Alignment.centerRight,
-                                      colors: [
-                                    Colors.black,
-                                    Colors.transparent
-                                  ])),
-                            ),
-                            Expanded(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: const <Widget>[
-                                  Text('Texto 2',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w700,
-                                        fontSize: 18,
-                                      )),
-                                  Text('Texto adicional 2',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                      ))
+                                  color: Color(0xFFCEE7D8),
+                                  borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(32.0),
+                                      bottomLeft: Radius.circular(32.0))),
+                              child: Row(
+                                children: <Widget>[
+                                  Expanded(
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: const <Widget>[
+                                            Text(
+                                              '25',
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w700,
+                                                fontSize: 18,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        const Text(
+                                          'CLIENTES PENDIENTES',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
-                            Container(
-                              width: 1,
-                              height: double.infinity,
-                              decoration: const BoxDecoration(
-                                  gradient: LinearGradient(
-                                      begin: Alignment.centerLeft,
-                                      end: Alignment.centerRight,
-                                      colors: [
-                                    Colors.black,
-                                    Colors.transparent
-                                  ])),
+                          ),
+                          //
+                          Container(
+                            height: 52,
+                            width: 114.3,
+                            decoration: const BoxDecoration(
+                              color: Color(0xFFCEE7D8),
                             ),
-                            Expanded(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: const <Widget>[
-                                  Text('Texto 3',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w700,
-                                        fontSize: 18,
-                                      )),
-                                  Text('Texto adicional 3',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                      ))
-                                ],
-                              ),
+                            child: Row(
+                              children: <Widget>[
+                                Expanded(
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: const <Widget>[
+                                          Text('2',
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w700,
+                                                fontSize: 18,
+                                              ))
+                                        ],
+                                      ),
+                                      const Text('CLIENTES VISITADOS',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                          ))
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
+                          ),
+                          //
+                          Container(
+                            height: 52,
+                            width: 114.3,
+                            decoration: const BoxDecoration(
+                                color: Color(0xFFCEE7D8),
+                                borderRadius: BorderRadius.only(
+                                    topRight: Radius.circular(32.0),
+                                    bottomRight: Radius.circular(32.0))),
+                            child: Row(
+                              children: <Widget>[
+                                Expanded(
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: const <Widget>[
+                                          Text('1',
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w700,
+                                                fontSize: 18,
+                                              ))
+                                        ],
+                                      ),
+                                      const Text('MENSAJES',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                          ))
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          //
+                        ],
                       ),
+
                       const SizedBox(
                         height: 26,
                       ),
@@ -296,12 +359,12 @@ class InicioList extends StatelessWidget {
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: const <Widget>[
-                                      Text('Título de la imagen',
+                                      Text('Nombre de la tienda',
                                           style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold,
                                           )),
-                                      Text('Descripción de la imagen',
+                                      Text('Nombre del cliente',
                                           style: TextStyle(
                                             fontSize: 14,
                                           )),
@@ -341,12 +404,12 @@ class InicioList extends StatelessWidget {
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: const <Widget>[
-                                      Text('Título de la imagen',
+                                      Text('Nombre de la tienda',
                                           style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold,
                                           )),
-                                      Text('Descripción de la imagen',
+                                      Text('Nombre del cliente',
                                           style: TextStyle(
                                             fontSize: 14,
                                           )),
@@ -386,12 +449,12 @@ class InicioList extends StatelessWidget {
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: const <Widget>[
-                                      Text('Título de la imagen',
+                                      Text('Nombre de la tienda',
                                           style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold,
                                           )),
-                                      Text('Descripción de la imagen',
+                                      Text('Nombre del cliente',
                                           style: TextStyle(
                                             fontSize: 14,
                                           )),
@@ -431,12 +494,12 @@ class InicioList extends StatelessWidget {
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: const <Widget>[
-                                      Text('Título de la imagen',
+                                      Text('Nombre de la tienda',
                                           style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold,
                                           )),
-                                      Text('Descripción de la imagen',
+                                      Text('Nombre del cliente',
                                           style: TextStyle(
                                             fontSize: 14,
                                           )),
@@ -476,12 +539,12 @@ class InicioList extends StatelessWidget {
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: const <Widget>[
-                                      Text('Título de la imagen',
+                                      Text('Nombre de la tienda',
                                           style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold,
                                           )),
-                                      Text('Descripción de la imagen',
+                                      Text('Nombre del cliente',
                                           style: TextStyle(
                                             fontSize: 14,
                                           )),
@@ -531,4 +594,59 @@ class Map extends StatelessWidget {
               colors: [Color(0xFF5FB957), Color(0xFF0C69EA)])),
     ));
   }
+}
+
+//Customs Clippers >,<
+class TriangleClipper extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    var path = Path();
+    path.moveTo(size.width, size.height * 0.5020192);
+    path.lineTo(size.width * 0.9774267, size.height);
+    path.lineTo(0, size.height);
+    path.lineTo(0, 0);
+    path.lineTo(size.width * 0.9773941, size.height * 0.0069231);
+    path.lineTo(size.width, size.height * 0.4991346);
+
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
+}
+
+class ReceiverClipper extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    var path = Path();
+    path.moveTo(size.width, 0);
+    path.lineTo(size.width, size.height);
+    path.lineTo(0, size.height);
+    path.lineTo(size.width * 0.0250489, size.height * 0.5035577);
+    path.lineTo(0, 0);
+    path.lineTo(size.width, size.height * 0.0069231);
+
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
+}
+
+class ThirdClipper extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    var path = Path();
+    path.moveTo(0, 0);
+    path.lineTo(0, size.height);
+    path.lineTo(size.width, size.height);
+    path.lineTo(size.width * 0.9623797, size.height * 0.5007692);
+    path.lineTo(size.width, 0);
+    path.lineTo(0, 0);
+
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
 }

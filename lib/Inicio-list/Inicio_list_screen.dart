@@ -52,6 +52,68 @@ class InicioList extends StatelessWidget {
                             color: Color(0xFFCEE7D8),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(32.0))),
+                        child: Row(
+                          children: <Widget>[
+                            Expanded(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: const <Widget>[
+                                      Text('\$111111',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 18,
+                                          ))
+                                    ],
+                                  ),
+                                  const Text('EFECTIVO',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                      ))
+                                ],
+                              ),
+                            ),
+                            Container(
+                              width: 1,
+                              height: double.infinity,
+                              decoration: const BoxDecoration(
+                                  gradient: LinearGradient(
+                                      begin: Alignment.centerLeft,
+                                      end: Alignment.centerRight,
+                                      colors: [
+                                    Colors.black,
+                                    Colors.transparent
+                                  ])),
+                            ),
+                            Expanded(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: const <Widget>[
+                                      Text('\$222222',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 18,
+                                          ))
+                                    ],
+                                  ),
+                                  const Text('CREDITO',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                      ))
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       const SizedBox(
                         height: 17,
@@ -64,6 +126,88 @@ class InicioList extends StatelessWidget {
                             color: Color(0xFFCEE7D8),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(32.0))),
+                        child: Row(
+                          children: <Widget>[
+                            Expanded(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: const <Widget>[
+                                  Text('Texto 1',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 18,
+                                      )),
+                                  Text('Texto adicional 1',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                      ))
+                                ],
+                              ),
+                            ),
+                            Container(
+                              width: 1,
+                              height: double.infinity,
+                              decoration: const BoxDecoration(
+                                  gradient: LinearGradient(
+                                      begin: Alignment.centerLeft,
+                                      end: Alignment.centerRight,
+                                      colors: [
+                                    Colors.black,
+                                    Colors.transparent
+                                  ])),
+                            ),
+                            Expanded(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: const <Widget>[
+                                  Text('Texto 2',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 18,
+                                      )),
+                                  Text('Texto adicional 2',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                      ))
+                                ],
+                              ),
+                            ),
+                            Container(
+                              width: 1,
+                              height: double.infinity,
+                              decoration: const BoxDecoration(
+                                  gradient: LinearGradient(
+                                      begin: Alignment.centerLeft,
+                                      end: Alignment.centerRight,
+                                      colors: [
+                                    Colors.black,
+                                    Colors.transparent
+                                  ])),
+                            ),
+                            Expanded(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: const <Widget>[
+                                  Text('Texto 3',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 18,
+                                      )),
+                                  Text('Texto adicional 3',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                      ))
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       const SizedBox(
                         height: 26,
@@ -134,35 +278,38 @@ class InicioList extends StatelessWidget {
                         height: 59,
                         child: Card(
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(30),
                           ),
                           elevation: 5,
-                          child: Row(
-                            children: <Widget>[
-                              SizedBox(
-                                width: 59,
-                                height: 59,
-                                child: Image.network(
-                                    'https://cdn-icons-png.flaticon.com/512/776/776645.png',
-                                    fit: BoxFit.cover),
-                              ),
-                              Expanded(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: const <Widget>[
-                                    Text('Título de la imagen',
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold,
-                                        )),
-                                    Text('Descripción de la imagen',
-                                        style: TextStyle(
-                                          fontSize: 14,
-                                        )),
-                                  ],
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 20.0),
+                            child: Row(
+                              children: <Widget>[
+                                SizedBox(
+                                  width: 40,
+                                  height: 40,
+                                  child: Image.network(
+                                      'https://cdn-icons-png.flaticon.com/512/776/776645.png',
+                                      fit: BoxFit.cover),
                                 ),
-                              ),
-                            ],
+                                Expanded(
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: const <Widget>[
+                                      Text('Título de la imagen',
+                                          style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                          )),
+                                      Text('Descripción de la imagen',
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -176,35 +323,38 @@ class InicioList extends StatelessWidget {
                         height: 59,
                         child: Card(
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(30),
                           ),
                           elevation: 5,
-                          child: Row(
-                            children: <Widget>[
-                              SizedBox(
-                                width: 59,
-                                height: 59,
-                                child: Image.network(
-                                    'https://cdn-icons-png.flaticon.com/512/776/776645.png',
-                                    fit: BoxFit.cover),
-                              ),
-                              Expanded(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: const <Widget>[
-                                    Text('Título de la imagen',
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold,
-                                        )),
-                                    Text('Descripción de la imagen',
-                                        style: TextStyle(
-                                          fontSize: 14,
-                                        )),
-                                  ],
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 20.0),
+                            child: Row(
+                              children: <Widget>[
+                                SizedBox(
+                                  width: 40,
+                                  height: 40,
+                                  child: Image.network(
+                                      'https://cdn-icons-png.flaticon.com/512/776/776645.png',
+                                      fit: BoxFit.cover),
                                 ),
-                              ),
-                            ],
+                                Expanded(
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: const <Widget>[
+                                      Text('Título de la imagen',
+                                          style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                          )),
+                                      Text('Descripción de la imagen',
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -218,35 +368,38 @@ class InicioList extends StatelessWidget {
                         height: 59,
                         child: Card(
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(30),
                           ),
                           elevation: 5,
-                          child: Row(
-                            children: <Widget>[
-                              SizedBox(
-                                width: 59,
-                                height: 59,
-                                child: Image.network(
-                                    'https://cdn-icons-png.flaticon.com/512/776/776645.png',
-                                    fit: BoxFit.cover),
-                              ),
-                              Expanded(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: const <Widget>[
-                                    Text('Título de la imagen',
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold,
-                                        )),
-                                    Text('Descripción de la imagen',
-                                        style: TextStyle(
-                                          fontSize: 14,
-                                        )),
-                                  ],
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 20.0),
+                            child: Row(
+                              children: <Widget>[
+                                SizedBox(
+                                  width: 40,
+                                  height: 40,
+                                  child: Image.network(
+                                      'https://cdn-icons-png.flaticon.com/512/776/776645.png',
+                                      fit: BoxFit.cover),
                                 ),
-                              ),
-                            ],
+                                Expanded(
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: const <Widget>[
+                                      Text('Título de la imagen',
+                                          style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                          )),
+                                      Text('Descripción de la imagen',
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -260,35 +413,38 @@ class InicioList extends StatelessWidget {
                         height: 59,
                         child: Card(
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(30),
                           ),
                           elevation: 5,
-                          child: Row(
-                            children: <Widget>[
-                              SizedBox(
-                                width: 59,
-                                height: 59,
-                                child: Image.network(
-                                    'https://cdn-icons-png.flaticon.com/512/776/776645.png',
-                                    fit: BoxFit.cover),
-                              ),
-                              Expanded(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: const <Widget>[
-                                    Text('Título de la imagen',
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold,
-                                        )),
-                                    Text('Descripción de la imagen',
-                                        style: TextStyle(
-                                          fontSize: 14,
-                                        )),
-                                  ],
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 20.0),
+                            child: Row(
+                              children: <Widget>[
+                                SizedBox(
+                                  width: 40,
+                                  height: 40,
+                                  child: Image.network(
+                                      'https://cdn-icons-png.flaticon.com/512/776/776645.png',
+                                      fit: BoxFit.cover),
                                 ),
-                              ),
-                            ],
+                                Expanded(
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: const <Widget>[
+                                      Text('Título de la imagen',
+                                          style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                          )),
+                                      Text('Descripción de la imagen',
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -302,77 +458,38 @@ class InicioList extends StatelessWidget {
                         height: 59,
                         child: Card(
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(30),
                           ),
                           elevation: 5,
-                          child: Row(
-                            children: <Widget>[
-                              SizedBox(
-                                width: 59,
-                                height: 59,
-                                child: Image.network(
-                                    'https://cdn-icons-png.flaticon.com/512/776/776645.png',
-                                    fit: BoxFit.cover),
-                              ),
-                              Expanded(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: const <Widget>[
-                                    Text('Título de la imagen',
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold,
-                                        )),
-                                    Text('Descripción de la imagen',
-                                        style: TextStyle(
-                                          fontSize: 14,
-                                        )),
-                                  ],
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 20.0),
+                            child: Row(
+                              children: <Widget>[
+                                SizedBox(
+                                  width: 40,
+                                  height: 40,
+                                  child: Image.network(
+                                      'https://cdn-icons-png.flaticon.com/512/776/776645.png',
+                                      fit: BoxFit.cover),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      //
-                      const SizedBox(
-                        height: 17,
-                      ),
-                      //
-                      SizedBox(
-                        width: 314,
-                        height: 59,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          elevation: 5,
-                          child: Row(
-                            children: <Widget>[
-                              SizedBox(
-                                width: 59,
-                                height: 59,
-                                child: Image.network(
-                                    'https://cdn-icons-png.flaticon.com/512/776/776645.png',
-                                    fit: BoxFit.cover),
-                              ),
-                              Expanded(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: const <Widget>[
-                                    Text('Título de la imagen',
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold,
-                                        )),
-                                    Text('Descripción de la imagen',
-                                        style: TextStyle(
-                                          fontSize: 14,
-                                        )),
-                                  ],
+                                Expanded(
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: const <Widget>[
+                                      Text('Título de la imagen',
+                                          style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                          )),
+                                      Text('Descripción de la imagen',
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                          )),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -384,7 +501,9 @@ class InicioList extends StatelessWidget {
                   ))),
         ),
       ),
+
       //Boton SOS
+
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red,
         child: const Text('SOS'),

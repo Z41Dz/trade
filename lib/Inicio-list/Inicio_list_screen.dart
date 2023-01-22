@@ -150,7 +150,7 @@ class InicioList extends StatelessWidget {
                         children: <Widget>[
                           //
                           ClipPath(
-                            clipper: ThirdClipper(),
+                            clipper: PendientesClipper(),
                             child: Container(
                               height: 52,
                               width: 114.3,
@@ -195,77 +195,93 @@ class InicioList extends StatelessWidget {
                             ),
                           ),
                           //
-                          Container(
-                            height: 52,
-                            width: 114.3,
-                            decoration: const BoxDecoration(
-                              color: Color(0xFFCEE7D8),
-                            ),
-                            child: Row(
-                              children: <Widget>[
-                                Expanded(
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: const <Widget>[
-                                          Text('2',
+                          ClipPath(
+                            clipper: VisitadosClipper(),
+                            child: Container(
+                              height: 52,
+                              width: 114.3,
+                              decoration: const BoxDecoration(
+                                color: Color(0xFFCEE7D8),
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  Expanded(
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: const <Widget>[
+                                            Text(
+                                              '2',
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
                                                 fontWeight: FontWeight.w700,
                                                 fontSize: 18,
-                                              ))
-                                        ],
-                                      ),
-                                      const Text('CLIENTES VISITADOS',
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        const Text(
+                                          'CLIENTES VISITADOS',
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                             fontSize: 12,
-                                          ))
-                                    ],
+                                          ),
+                                        )
+                                      ],
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                           //
-                          Container(
-                            height: 52,
-                            width: 114.3,
-                            decoration: const BoxDecoration(
-                                color: Color(0xFFCEE7D8),
-                                borderRadius: BorderRadius.only(
-                                    topRight: Radius.circular(32.0),
-                                    bottomRight: Radius.circular(32.0))),
-                            child: Row(
-                              children: <Widget>[
-                                Expanded(
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: const <Widget>[
-                                          Text('1',
+                          ClipPath(
+                            clipper: MensajeClipper(),
+                            child: Container(
+                              height: 52,
+                              width: 114.3,
+                              decoration: const BoxDecoration(
+                                  color: Color(0xFFCEE7D8),
+                                  borderRadius: BorderRadius.only(
+                                      topRight: Radius.circular(32.0),
+                                      bottomRight: Radius.circular(32.0))),
+                              child: Row(
+                                children: <Widget>[
+                                  Expanded(
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: const <Widget>[
+                                            Text(
+                                              '1',
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
                                                 fontWeight: FontWeight.w700,
                                                 fontSize: 18,
-                                              ))
-                                        ],
-                                      ),
-                                      const Text('MENSAJES',
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        const Text(
+                                          'Mensajes',
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                             fontSize: 12,
-                                          ))
-                                    ],
+                                          ),
+                                        )
+                                      ],
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                           //
@@ -633,7 +649,7 @@ class ReceiverClipper extends CustomClipper<Path> {
   bool shouldReclip(CustomClipper<Path> oldClipper) => false;
 }
 
-class ThirdClipper extends CustomClipper<Path> {
+class PendientesClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     var path = Path();
@@ -643,6 +659,47 @@ class ThirdClipper extends CustomClipper<Path> {
     path.lineTo(size.width * 0.9623797, size.height * 0.5007692);
     path.lineTo(size.width, 0);
     path.lineTo(0, 0);
+
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
+}
+
+class MensajeClipper extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    var path = Path();
+
+    path.moveTo(size.width * 0.0371391, size.height * 0.4995192);
+    path.lineTo(0, size.height);
+    path.lineTo(size.width, size.height);
+    path.lineTo(size.width, 0);
+    path.lineTo(0, 0);
+    path.lineTo(size.width * 0.0371391, size.height * 0.4995192);
+    path.close();
+
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
+}
+
+class VisitadosClipper extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    var path = Path();
+
+    path.moveTo(size.width * 0.0354768, 0);
+    path.lineTo(size.width * 0.9643920, 0);
+    path.lineTo(size.width, size.height * 0.5057692);
+    path.lineTo(size.width * 0.9644357, size.height);
+    path.lineTo(size.width * 0.0362642, size.height);
+    path.lineTo(0, size.height * 0.4999038);
+    path.lineTo(size.width * 0.0354768, 0);
+    path.close();
 
     return path;
   }
